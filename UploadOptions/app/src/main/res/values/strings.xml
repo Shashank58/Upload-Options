@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UploadOptions</string>
+    <array name="image_upload_methods">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </array>
+    <array name="video_upload_methods">
+        <item>Video</item>
+        <item>Gallery</item>
+    </array>
+</resources>

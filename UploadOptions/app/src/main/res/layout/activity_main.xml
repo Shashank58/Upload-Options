@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cybrilla.uploadoptions.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:elevation="4dp"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_delete_52"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_checkmark"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/status"
+        android:layout_below="@+id/toolbar"
+        android:hint="Type status..."
+        android:background="#ffffff"
+        android:layout_margin="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttons"
+        android:layout_below="@+id/status"
+        android:layout_margin="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_upload"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Upload Image"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_upload"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Upload video"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pic_thumbnail"
+        android:layout_below="@+id/buttons"
+        android:layout_margin="15dp"/>
+
+    <VideoView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/video"
+        android:layout_below="@+id/buttons"
+        android:layout_toRightOf="@+id/pic_thumbnail"
+        android:layout_margin="15dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
